@@ -7,9 +7,20 @@ plugins {
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
 
-java {
+/*java {
     toolchain {
         languageVersion = JavaLanguageVersion.of(17)
+    }
+}*/
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'com.example.holiday_receiver.HolidayReceiverApplication'
+        )
     }
 }
 
